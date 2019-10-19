@@ -3,6 +3,11 @@ title: $:/plugins/smilyorg/request/readme
 This plugin makes it possible to request or scrape websites in a modular way
 through extensions provided by tiddlers.
 
-Set the `url` field of a tiddler and press the Request button.
+Set the `url` field of a tiddler and press the down arrow Request button.
+
+Note that for websites that don't explicity allow cross-origin requests, you
+will need to configure a CORS proxy
+(for example https://cors-anywhere.herokuapp.com/) in
+[[Settings|$:/plugins/smilyorg/request/settings]].
 
 <div>Down arrow icon made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>

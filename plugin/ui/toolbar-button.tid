@@ -10,13 +10,13 @@ tags: $:/tags/EditorToolbar
 title: $:/plugins/smilyorg/request/toolbar-button
 type: text/vnd.tiddlywiki
 
-<$set name="buttonTiddler" value=<<currentTiddler>> >
+<$set name="statusTiddler" value=<<qualify "$:/state/smilyorg/request/status">> >
 <$tiddler tiddler=<<targetTiddler>> >
 	<$action-sendmessage
 		$message="request"
 		url={{!!url}}
-		statusTiddler=<<buttonTiddler>>
+		statusTiddler=<<statusTiddler>>
 	/>
 </$tiddler>
 
-{{!!status}}
+<$transclude tiddler=<<statusTiddler>> />

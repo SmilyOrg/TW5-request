@@ -22,7 +22,7 @@
 
     function status(msg) {
       if (!statusTiddler) return;
-      $tw.wiki.setText(statusTiddler, "status", undefined, msg);
+      $tw.wiki.setText(statusTiddler, undefined, undefined, msg);
     }
 
     let url;
@@ -60,6 +60,7 @@
 
       if (req.readyState != 4) return;
       if (req.status != 200) {
+        console.error(req);
         status("Error " + req.status);
         return;
       }
