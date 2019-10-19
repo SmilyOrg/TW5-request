@@ -1,0 +1,22 @@
+caption: Request
+condition: [<targetTiddler>!has[type]] [<targetTiddler>type[text/vnd.tiddlywiki]]
+created: 20191008232550974
+description: Request 
+icon: $:/plugins/smilyorg/request/icon
+modified: 20191016175203467
+shortcuts: 
+status: 
+tags: $:/tags/EditorToolbar
+title: $:/plugins/smilyorg/request/toolbar-button
+type: text/vnd.tiddlywiki
+
+<$set name="buttonTiddler" value=<<currentTiddler>> >
+<$tiddler tiddler=<<targetTiddler>> >
+	<$action-sendmessage
+		$message="request"
+		url={{!!url}}
+		statusTiddler=<<buttonTiddler>>
+	/>
+</$tiddler>
+
+{{!!status}}

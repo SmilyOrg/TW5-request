@@ -1,0 +1,35 @@
+{
+  "name": "tw5-request",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf build",
+    "build": "mkdirp build && run-s build:prepare build:tiddlywiki",
+    "build:prepare": "cp node_modules/tiddlywiki/editions/server/tiddlywiki.info build/",
+    "build:tiddlywiki": "tiddlywiki ++./plugin build --verbose --output build/ --build index",
+    "serve:start": "run-s serve:stop && node scripts/serve-start.js",
+    "serve:stop": "node scripts/serve-stop.js",
+    "serve:open": "sleep 2 && open-cli http://127.0.0.1:8080 --background &",
+    "watch": "chokidar -d 1000 \"plugin/**/*\" -c \"run-s build serve:start\" --initial",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SmilyOrg/TW5-request.git"
+  },
+  "author": "Miha Lunar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SmilyOrg/TW5-request/issues"
+  },
+  "homepage": "https://github.com/SmilyOrg/TW5-request#readme",
+  "dependencies": {
+    "chokidar-cli": "^2.0.0",
+    "mkdirp": "^0.5.1",
+    "npm-run-all": "^4.1.5",
+    "open-cli": "^5.0.0",
+    "tiddlywiki": "^5.1.21",
+    "tree-kill": "^1.2.1"
+  }
+}

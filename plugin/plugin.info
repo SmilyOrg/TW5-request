@@ -1,0 +1,10 @@
+{
+    "title": "$:/plugins/smilyorg/request",
+    "description": "Request: request or scrape external information",
+    "author": "Miha Lunar",
+    "version": "0.0.1",
+    "core-version": ">=5.1.21",
+    "source": "https://github.com/smilyorg/TW5-request",
+    "plugin-type": "plugin",
+	"list": "readme settings"
+}

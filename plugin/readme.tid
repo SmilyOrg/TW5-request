@@ -1,0 +1,8 @@
+title: $:/plugins/smilyorg/request/readme
+
+This plugin makes it possible to request or scrape websites in a modular way
+through extensions provided by tiddlers.
+
+Set the `url` field of a tiddler and press the Request button.
+
+<div>Down arrow icon made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>

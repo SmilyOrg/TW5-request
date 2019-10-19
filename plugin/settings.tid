@@ -1,0 +1,3 @@
+title: $:/plugins/smilyorg/request/settings
+
+|<$link to="$:/plugins/smilyorg/request/settings/proxy">CORS Proxy URL</$link> |<$edit-text tiddler="$:/plugins/smilyorg/request/settings/proxy" default="" tag="input"/> |

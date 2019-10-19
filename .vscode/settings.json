@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "*.info": "json"
+    },
+    "editor.tabSize": 2
+}
